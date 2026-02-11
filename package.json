@@ -1,0 +1,39 @@
+{
+  "name": "lettercli",
+  "version": "0.1.0",
+  "description": "Terminal ASCII art name renderer with gradients, shadow and interactive mode",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "lettercli": "./bin/lettercli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "cli",
+    "terminal",
+    "ascii",
+    "figlet",
+    "gradient"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node ./bin/lettercli.js",
+    "smoke": "node ./bin/lettercli.js cdx --gradient mind --shadow --center --animate line --speed fast",
+    "prepublishOnly": "npm run smoke"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "figlet": "^1.8.0",
+    "gradient-string": "^2.0.2",
+    "minimist": "^1.2.8",
+    "string-width": "^7.2.0",
+    "strip-ansi": "^7.1.0"
+  }
+}
